@@ -1,0 +1,191 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #333;
+	font-family: "Lato", sans-serif;
+	background-image: url(img/back-with-logo-min.jpeg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+.card {
+	perspective: 150rem;
+	-moz-perspective: 150rem;
+	position: relative;
+	height: 52rem;
+	width: 52rem;
+	margin: 0 auto;
+}
+.card__side {
+	height: 52rem;
+	transition: all 0.8s ease;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card__side--front {
+	margin-top: 10rem;
+	background-color: transparent;
+}
+.card__side--back {
+	transform: rotateY(180deg);
+	margin-top: 10rem;
+	background-color: transparent;
+}
+
+.card__side--front-switch {
+	transform: rotateY(-180deg);
+}
+.card__side--back-switch {
+	transform: rotateY(0);
+}
+.card__heading-1 {
+	font-size: 2.8rem;
+	text-transform: uppercase;
+	color: #fff;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.card__heading-2 {
+	font-size: 2.8rem;
+	text-transform: uppercase;
+	color: #fff;
+	position: absolute;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.card__heading-span {
+	padding: 1rem 1.5rem;
+	background-image: linear-gradient(to right, #8f8fec, #fff600);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+.card__detail {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.input-field {
+	padding: 0 2rem;
+	background-color: #acacac;
+	height: 5.5rem;
+	width: 30rem;
+	border-radius: 5rem;
+	margin: 2rem 0;
+}
+
+.input-field input {
+	outline: none;
+	background: none;
+	border: none;
+	padding-left: 2rem;
+	font-size: 1.6rem;
+}
+
+.input-field input:focus {
+	padding-bottom: 1.5rem;
+	border-bottom: 3px solid #11f51c;
+}
+
+.input-field input:focus:invalid {
+	padding-bottom: 1.5rem;
+	border-bottom: 3px solid #dd1616;
+}
+
+.input-field input::placeholder {
+	color: #fff;
+	line-height: 5rem;
+}
+
+.input-field i {
+	line-height: 5rem;
+	text-align: center;
+	font-size: 1.8rem;
+	color: #000;
+}
+
+.btn {
+	border-radius: 5rem;
+	height: 5rem;
+	width: 12rem;
+	position: relative;
+	top: 4rem;
+	left: 30%;
+	cursor: pointer;
+	background-color: #acacac;
+}
+
+.switch {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.switch button {
+	margin-top: 0.5rem;
+	margin-left: 5rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s;
+	padding: 1rem;
+	border-radius: 50px;
+	color: #daac0b;
+}
+
+.switch button:hover {
+	box-shadow: 1px 1px 1px 1px #333;
+}
+
+.switch-2 {
+	position: absolute;
+	top: 95%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.switch-2 button {
+	margin-top: 0.5rem;
+	margin-left: 9rem;
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s;
+	padding: 1rem;
+	border-radius: 50px;
+	color: #daac0b;
+}
+
+.switch-2 button:hover {
+	box-shadow: 1px 1px 1px 1px #333;
+}
+
+.detail {
+	font-size: 1.5rem;
+	color: #daac0b;
+}

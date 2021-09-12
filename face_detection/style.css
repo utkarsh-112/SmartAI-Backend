@@ -1,0 +1,87 @@
+/*Base*/
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+.logo{
+  position: absolute;
+  bottom: 0;
+  top: .5rem;
+  margin-left: 14rem;
+}
+
+/*canvas is used to display the face detection box on screen*/
+canvas {
+  position: absolute;
+}
+
+/*Button*/
+.button{
+  position: absolute;
+  bottom: 4rem;
+}
+
+.btn, .btn:link, .btn:visited {
+   text-transform: uppercase;
+   text-decoration: none;
+   padding: 1.5rem 4rem;
+   display: inline-block;
+   border-radius: 10rem;
+   transition: all 0.2s;
+   position: relative;
+   font-size: 16px;
+   border: none;
+   cursor: pointer;
+}
+
+.btn:hover {
+   transform: translateY(-3px);
+   box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+}
+ .btn:hover::after {
+   transform: scaleX(1.4) scaleY(1.6);
+   opacity: 0;
+}
+ .btn:active, .btn:focus {
+   outline: none;
+   transform: translateY(-1px);
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .2);
+}
+ .btn--white {
+   background-color: #fff;
+   color: #0000FF;
+}
+ .btn--white::after {
+   background-color: transparent;
+}
+ .btn--blue {
+   background-image: linear-gradient(to right, #e14aca, #7b57d7);
+   color: #fff;
+}
+ .btn--blue::after {
+   background-color: #7b57d7;
+}
+ .btn::after {
+   content: "";
+   display: inline-block;
+   height: 100%;
+   width: 100%;
+   border-radius: 10rem;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   transition: all 0.4s;
+}
